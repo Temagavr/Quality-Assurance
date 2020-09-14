@@ -10,7 +10,7 @@ namespace Triangle
             {
                 try
                 {
-                    Convert.ToInt32(temp);
+                    Convert.ToDouble(temp);
                 }
                 catch { return false; }
             }
@@ -22,9 +22,9 @@ namespace Triangle
             bool flag = CheckArgs(ref args);
             if (flag && (args.Length == 3))
             {
-                int a = Convert.ToInt32(args[0]);
-                int b = Convert.ToInt32(args[1]);
-                int c = Convert.ToInt32(args[2]);
+                double a = Convert.ToDouble(args[0]);
+                double b = Convert.ToDouble(args[1]);
+                double c = Convert.ToDouble(args[2]);
                 if ((a + b > c) && (b + c > a) && (a + c > b))
                 {
                     if (a == b && b == c) { return "Равносторонний"; }
