@@ -10,7 +10,11 @@ namespace Triangle
             {
                 try
                 {
-                    Convert.ToDouble(temp);
+                    double tempDouble = Convert.ToDouble(temp);
+                    if(tempDouble == double.PositiveInfinity || tempDouble < 0)
+                    {
+                        return false;
+                    }
                 }
                 catch { return false; }
             }
